@@ -14,6 +14,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <rest-assured>5.2.0</rest-assured>
         <testng>7.10.0</testng>
+        <jackson-databind>2.18.0</jackson-databind>
     </properties>
 
     <dependencies>
@@ -26,6 +27,11 @@
             <groupId>org.testng</groupId>
             <artifactId>testng</artifactId>
             <version>${testng}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>${jackson-databind}</version>
         </dependency>
     </dependencies>
 
