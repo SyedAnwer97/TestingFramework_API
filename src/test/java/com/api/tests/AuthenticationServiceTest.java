@@ -1,13 +1,14 @@
 package com.api.tests;
 
 import com.api.models.request.LoginRequest;
+import com.api.models.request.SignUpRequest;
 import com.api.models.response.LoginResponse;
 import com.api.services.AuthService;
 import io.restassured.response.Response;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class LoginTest3 {
+public class AuthenticationServiceTest {
 
     @Test
     public void loginTest() {
@@ -29,5 +30,20 @@ public class LoginTest3 {
         response.prettyPrint();
     }
 
+    @Test
+    public void signupTest() {
+        AuthService authService = new AuthService();
+        SignUpRequest signUpRequest = new SignUpRequest.Builder()
+                .setUsername("kingdomTest1234")
+                .setPassword("setPassword123")
+                .setEmail("test2335@gmail.com")
+                .setFirstName("syed")
+                .setLastName("anwer")
+                .setMobileNumber("6024874058")
+                .build();
+
+        Response response= authService.signup(signUpRequest);
+        response.prettyPrint();
+    }
 
 }

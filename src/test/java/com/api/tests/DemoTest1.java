@@ -6,7 +6,7 @@ import io.restassured.specification.RequestSpecification;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class LoginTest {
+public class DemoTest1 {
 
     @Test
     public void loginAPI() {
