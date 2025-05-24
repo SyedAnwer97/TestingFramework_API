@@ -6,11 +6,13 @@ import com.api.models.response.LoginResponse;
 import com.api.services.AuthService;
 import io.restassured.response.Response;
 import org.testng.Assert;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
+@Listeners(com.api.listeners.TestListeners.class)
 public class AuthenticationServiceTest {
 
-    @Test
+    @Test()
     public void loginTest() {
         AuthService authService = new AuthService();
         LoginRequest loginPayload = new LoginRequest("syed1234", "syed1234");
@@ -42,7 +44,7 @@ public class AuthenticationServiceTest {
                 .setMobileNumber("6024874058")
                 .build();
 
-        Response response= authService.signup(signUpRequest);
+        Response response = authService.signup(signUpRequest);
         response.prettyPrint();
     }
 

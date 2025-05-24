@@ -8,8 +8,10 @@ import com.api.models.response.ProfileResponse;
 import com.api.services.AuthService;
 import com.api.services.UserManagementService;
 import io.restassured.response.Response;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
+@Listeners(com.api.listeners.TestListeners.class)
 public class UserManagementServiceTest {
 
     @Test
